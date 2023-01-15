@@ -10,6 +10,6 @@ TypeScript
 MVC
 ## 使用ライブラリ
 ### サーバ用フレームワーク
-express（MIT License）
+fastify（MIT License）
 ### テンプレートエンジン
 ejs （Apache License 2.0）
