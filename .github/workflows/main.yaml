@@ -1,8 +1,14 @@
-on: push
+on:
+  pull_request:
+    branches:
+      - master
+    types: [closed]
 
 jobs:
-  hello:
+  deploy:
     runs-on: self-hosted
-
+    if: github.event.pull_request.merged == true
     steps:
-      - run: echo 'Hello World!'
+      - run: npm install
+      - run: npm run delete
+      - run: npm run deploy

@@ -6,7 +6,9 @@
   "scripts": {
     "commit-lint": "npx prettier --write ./src/*.ts && npx eslint ./src/*",
     "ci-lint": "npx prettier -c ./src/*.ts && npx eslint ./src/*",
-    "start": "npx ts-node ./src/server.ts"    
+    "start": "npx ts-node ./src/server.ts",
+    "delete": "npx pm2 delete all || true",
+    "deploy":"npx pm2 install typescript && npx pm2 start src/server.ts"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,7 @@
   },
   "dependencies": {
     "fastify": "^4.11.0",
-    "fastify-plugin": "^4.5.0"
+    "fastify-plugin": "^4.5.0",
+    "pm2": "^5.2.2"
   }
 }
