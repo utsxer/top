@@ -9,6 +9,7 @@ jobs:
     runs-on: self-hosted
     if: github.event.pull_request.merged == true
     steps:
+      - uses: actions/checkout@v3
       - run: npm install
       - run: npm run delete
       - run: npm run deploy
