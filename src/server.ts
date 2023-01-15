@@ -1,19 +1,12 @@
-import fastify from 'fastify';
+import express from 'express';
+const app: express.Express = express();
+app.use(express.urlencoded({ extended: true }));
+app.set('view engine', 'ejs');
 
-const server = fastify();
-
-server.get('/', async () => {
-  return 'Hello World\n';
+app.get('/', (req: express.Request, res: express.Response) => {
+  res.render('top');
 });
 
-server.get('/ping', async () => {
-  return 'pong\n';
-});
-
-server.listen({ port: 8080 ,host: '127.0.0.1'}, (err, address) => {
-  if (err) {
-    console.error(err);
-    process.exit(1);
-  }
-  console.log(`Server listening at ${address}`);
+app.listen(8080, () => {
+  console.log('Start on port 8080.');
 });
