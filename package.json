@@ -4,8 +4,9 @@
   "description": "## 目的 就活用ポートフォリオサイトを作成するに当たり複数サーバの運用が必要そうだが，一箇所から色々閲覧できたほうが便利なのでプロキシとしてサーバを立てる。",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint"
+    "commit-lint": "npx prettier --write ./src/*.ts && npx eslint ./src/*",
+    "ci-lint": "npx prettier -c ./src/*.ts && npx eslint ./src/*",
+    "start": "npx ts-node ./src/server.ts"    
   },
   "repository": {
     "type": "git",
