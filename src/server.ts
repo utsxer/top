@@ -1,4 +1,4 @@
-import express from 'express';
+import * as express from 'express';
 const app: express.Express = express();
 app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
