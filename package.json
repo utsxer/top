@@ -7,8 +7,8 @@
     "commit-lint": "npx prettier --write ./src/*.ts && npx eslint ./src/*",
     "ci-lint": "npx prettier -c ./src/*.ts && npx eslint ./src/*",
     "start": "npx ts-node ./src/server.ts",
-    "delete": "npx pm2 delete all || true",
-    "deploy": "npx pm2 install typescript && npx pm2 start src/server.ts"
+    "delete": "npx pm2 delete top || true",
+    "deploy": "npx pm2 install typescript && npx pm2 -n top start src/server.ts"
   },
   "repository": {
     "type": "git",
