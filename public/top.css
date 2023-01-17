@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/earlyaccess/nicomoji.css');
+body{
+    width: 1000;
+    margin:0 auto;
+    text-align: center;
+}
+h1 {
+    padding: 0.5em;
+    color:#010101;
+    background: #eaf3ff;
+    border-bottom: solid 3px #516ab6;
+  }
+h2{
+    font-family: "Nico Moji";
+    color:#010101;
+    background: #eaf3ff;
+    border-bottom: solid 3px #516ab6;
+}
+  .accordion-area{
+    list-style: none;
+    width: 96%;
+    max-width: 900px;
+    margin:0 auto;
+}
+
+.accordion-area li{
+    margin: 10px 0;
+}
+
+.accordion-area section {
+	border: 1px solid #ccc;
+}
+
+/*アコーディオンタイトル*/
+.title {
+    position: relative;/*+マークの位置基準とするためrelative指定*/
+    cursor: pointer;
+    font-size:large;
+    font-weight: normal;
+    padding: 3% 3% 3% 50px;
+    transition: all .5s ease;
+}
+
+/*アイコンの＋と×*/
+.title::before,
+.title::after{
+    position: absolute;
+    content:'';
+    width: 15px;
+    height: 2px;
+    background-color: #333;
+    
+}
+.title::before{
+    top:48%;
+    left: 15px;
+    transform: rotate(0deg);
+    
+}
+.title::after{    
+    top:48%;
+    left: 15px;
+    transform: rotate(90deg);
+
+}
+/*　closeというクラスがついたら形状変化　*/
+.title.close::before{
+	transform: rotate(45deg);
+}
+
+.title.close::after{
+	transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.box {
+    display: none;/*はじめは非表示*/
+    background: #f3f3f3;
+	margin:0 3% 3% 3%;
+    padding: 3%;
+}
+ul{
+    padding-left:0;
+  }
+  
+  li{
+    list-style:none;
+  }
