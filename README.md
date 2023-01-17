@@ -5,9 +5,7 @@
 
 ## 使っている技術
 ## 使用言語
-TypeScript
-## モデル
-MVC
+TypeScript(サーバ)
 ## 使用ライブラリ
 ### サーバ用フレームワーク
 ExpressJS（MIT License）
