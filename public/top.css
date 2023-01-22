@@ -86,3 +86,6 @@ ul{
   li{
     list-style:none;
   }
+table{
+    margin: auto;
+}

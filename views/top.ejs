@@ -55,8 +55,8 @@
               <section>
                 <h3 class="title">開発技術セット</h3>
                 <div class="box">
+                  <p>利用技術</p>
                   <table>
-                    <p>利用技術</p>
                     <tr>
                       <td>設計モデル</td>
                       <td>MVCモデル</td>
@@ -119,6 +119,7 @@
                 <h3 class="title">サイトURL</h3>
                 <div class="box">
                   <a href="https://reservation.utahrym.dev">面談予約サイト</a>
+                <p>サインアップ＝＞サインインと進んでこちらを入力してください。<br>id:guest<br>pass:password2023<br><br>※通常の流れで任意のメールアドレスを登録いただくことも可能です。</p>
                 </div>
               </section>
             </li>
@@ -149,8 +150,32 @@
               <section>
                 <h3 class="title">開発技術セット</h3>
                 <div class="box">
-                  <table></table>
+                  <table>
+                    <tr>
+                      <td>使用言語</td>
+                      <td>TypeScript</td>
+                    </tr>
+                    <tr>
+                      <td>パーサジェネレータ</td>
+                      <td>PegJS</td>
+                    </tr>
+                  </table>
                 </div>
+              </section>
+            </li>
+            <li>
+              <section>
+                <h3 class="title">工夫点</h3>
+                <div class="box">
+                  <h4>TypeScript</h4>
+                  将来的にWebページ上で動作するコンパイラとしてサービス提供をしたいのでTypeScript(JavaScript)で作成しました。
+                  現在はNodeJSを動作環境としていますが，今後ブラウザ上で動くように修正予定です。
+                   <h4>スタックマシンの再現</h4>
+                   <p>トランスパイラによって生成されるコードはスタックマシンの計算モデルとなっています。
+                   関数配列をメモリに見立ててポインタの役割をする変数でメモリ（配列）を端からたどります。</p><br>
+                   <a href="https://github.com/utsxer/white-spaceJS/blob/main/src/ws_js_translator/sample_output/helloWorld.js">生成されるコードのサンプル（HelloWorld）</a>
+                </div>
+
               </section>
             </li>
             <li>
